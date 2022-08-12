@@ -1,0 +1,197 @@
+hello hi
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~
+$ git --version
+git version 2.37.2.windows.2
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~
+$ git help config
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~
+$ master
+bash: master: command not found
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~
+$ mkdir test
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~
+$ cd test
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test
+$ git init
+Initialized empty Git repository in C:/Users/balaji/test/.git/
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ ^C
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git status
+bash: $'\302\203git': command not found
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git add demo.txt
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git commit -m "commiting a text file"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'balaji@DESKTOP-V8AEBCU.(none)')
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git config --global user.email "balurajraj29@gmail.com"
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git config --global user.name "balaji"
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git commit -m "commiting a text file"
+[master (root-commit) 6ab9119] commiting a text file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo.txt
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git config --global user.username Balajiravukumar
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git remote add origin hhttps://github.com/Balajiravikumar/demo.git
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git push origin master
+fatal: protocol 'https' is not supported
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git remote add origin https://github.com/Balajiravikumar/demo.git
+error: remote origin already exists.
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git push origin master
+fatal: protocol 'https' is not supported
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git push origin master
+fatal: protocol 'https' is not supported
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git clone $ git push origin master
+fatal: protocol 'https' is not supported
+fatal: Too many arguments.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --reject-shallow      don't clone shallow repository
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --also-filter-submodules
+                          apply partial clone filters to submodules
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+
+bash: fatal:: command not found
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git clone https://github.com/Balajiravikumar/demo.git
+Cloning into 'demo'...
+warning: You appear to have cloned an empty repository.
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Balajiravikumar/demo.git'
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git push -u origin master
+fatal: protocol 'https' is not supported
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ echo "# demo" >> README.md
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/balaji/test/.git/
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git commit -m "first commit"
+[master c4a6244] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (master)
+$ git branch -M main
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (main)
+$ git remote add origin https://github.com/Balajiravikumar/demo.git
+error: remote origin already exists.
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (main)
+$ git push -u origin main
+fatal: protocol 'https' is not supported
+
+balaji@DESKTOP-V8AEBCU MINGW64 ~/test (main)
